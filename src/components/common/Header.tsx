@@ -12,8 +12,8 @@ const Header = () => {
     <div className="p-8 h-20 flex flex-row justify-start items-center header w-full">
       <Icon
         icon={car}
-        size="64"
         title="Beach"
+        size="large"
         aria-hidden="true"
         className="cursor-pointer"
         onClick={goHome}

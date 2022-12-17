@@ -1,5 +1,5 @@
 import React from "react";
-import { Anchor } from "@dnb/eufemia";
+import { Link } from "react-router-dom";
 
 interface NavItemProps {
   url: string;
@@ -9,10 +9,8 @@ interface NavItemProps {
 const NavItem = (props: NavItemProps) => {
   const { url, label } = props;
   return (
-    <div>
-      <Anchor href={url} className="dnb-anchor--no-underline">
-        {label}
-      </Anchor>
+    <div className="">
+      <Link to={url}>{label}</Link>
     </div>
   );
 };
