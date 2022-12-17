@@ -1,0 +1,214 @@
+{
+  "parkingGarage": {
+    "parkingsAvailableMessage": "Available parking spaces 30",
+    "parkingFloors": [
+      {
+        "id": "PF0001",
+        "name": "Parking Floor 0001",
+        "parkingPanelMessage": "Available parking spaces 5",
+        "totalParkingSpaces": 10,
+        "availableParkingSpaces": 5,
+        "parkingSpots": [
+          {
+            "id": "PS0001",
+            "name": "Parking Spot 0001",
+            "type": "COMPACT",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS0002",
+            "name": "Parking Spot 0002",
+            "type": "COMPACT",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS0003",
+            "name": "Parking Spot 0003",
+            "type": "COMPACT",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS0004",
+            "name": "Parking Spot 0004",
+            "type": "COMPACT",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS0005",
+            "name": "Parking Spot 0005",
+            "type": "COMPACT",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS0006",
+            "name": "Parking Spot 0006",
+            "type": "HANDICAPPED",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS0007",
+            "name": "Parking Spot 0007",
+            "type": "LARGE",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS0008",
+            "name": "Parking Spot 0008",
+            "type": "LARGE",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS0009",
+            "name": "Parking Spot 0009",
+            "type": "MOTORCYCLE",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS0010",
+            "name": "Parking Spot 0010",
+            "type": "MOTORCYCLE",
+            "status": "OCCUPIED"
+          }
+        ]
+      },
+      {
+        "id": "PF0002",
+        "name": "Parking Floor 0002",
+        "parkingPanelMessage": "Available parking spaces 7",
+        "totalParkingSpaces": 10,
+        "availableParkingSpaces": 7,
+        "parkingSpots": [
+          {
+            "id": "PS2001",
+            "name": "Parking Spot 2001",
+            "type": "LARGE",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS2002",
+            "name": "Parking Spot 2002",
+            "type": "LARGE",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS2003",
+            "name": "Parking Spot 2003",
+            "type": "LARGE",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS2004",
+            "name": "Parking Spot 2004",
+            "type": "HANDICAPPED",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS2005",
+            "name": "Parking Spot 2005",
+            "type": "HANDICAPPED",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS2006",
+            "name": "Parking Spot 2006",
+            "type": "COMPACT",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS2007",
+            "name": "Parking Spot 2007",
+            "type": "COMPACT",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS2008",
+            "name": "Parking Spot 2008",
+            "type": "MOTORCYCLE",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS2009",
+            "name": "Parking Spot 2009",
+            "type": "MOTORCYCLE",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS2010",
+            "name": "Parking Spot 2010",
+            "type": "COMPACT",
+            "status": "OCCUPIED"
+          }
+        ]
+      },
+      {
+        "id": "PF0003",
+        "name": "Parking Floor 0003",
+        "parkingPanelMessage": "Available parking spaces 9",
+        "totalParkingSpaces": 10,
+        "availableParkingSpaces": 9,
+        "parkingSpots": [
+          {
+            "id": "PS3001",
+            "name": "Parking Spot 3001",
+            "type": "HANDICAPPED",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS3002",
+            "name": "Parking Spot 3002",
+            "type": "HANDICAPPED",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS3003",
+            "name": "Parking Spot 3003",
+            "type": "MOTORCYCLE",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS3004",
+            "name": "Parking Spot 3004",
+            "type": "MOTORCYCLE",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS3005",
+            "name": "Parking Spot 3005",
+            "type": "COMPACT",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS3006",
+            "name": "Parking Spot 3006",
+            "type": "COMPACT",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS3007",
+            "name": "Parking Spot 3007",
+            "type": "COMPACT",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS3008",
+            "name": "Parking Spot 3008",
+            "type": "LARGE",
+            "status": "AVAILABLE"
+          },
+          {
+            "id": "PS3009",
+            "name": "Parking Spot 3009",
+            "type": "LARGE",
+            "status": "OCCUPIED"
+          },
+          {
+            "id": "PS3010",
+            "name": "Parking Spot 3010",
+            "type": "LARGE",
+            "status": "OCCUPIED"
+          }
+        ]
+      }
+    ]
+  }
+}
