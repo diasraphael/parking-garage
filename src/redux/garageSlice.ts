@@ -5,8 +5,8 @@ export type InitialState = {
 };
 const initialState: InitialState = { displayBoard: "You can park here!!!" };
 
-export const parkingSlice = createSlice({
-  name: "parking",
+export const garageSlice = createSlice({
+  name: "parking garage",
   initialState,
   reducers: {
     // add your non-async reducers here
@@ -22,6 +22,6 @@ export const parkingSlice = createSlice({
 });
 
 // Action creators
-export const { updateDisplayBoard } = parkingSlice.actions;
+export const { updateDisplayBoard } = garageSlice.actions;
 
-export default parkingSlice.reducer;
+export default garageSlice.reducer;

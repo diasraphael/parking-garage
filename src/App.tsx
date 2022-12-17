@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "./redux/hooks";
 import "./App.css";
-import { updateDisplayBoard } from "./redux/parkingSlice";
+import { updateDisplayBoard } from "./redux/garageSlice";
 import { Button } from "@dnb/eufemia";
 import "@dnb/eufemia/style";
 import Header from "./components/common/Header";

@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import parkingReducer from "./parkingSlice";
+import parkingReducer from "./garageSlice";
 
 const reducer = {
   parkings: parkingReducer,
