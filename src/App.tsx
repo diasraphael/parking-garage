@@ -4,6 +4,8 @@ import "./App.css";
 import { updateDisplayBoard } from "./redux/parkingSlice";
 import { Button } from "@dnb/eufemia";
 import "@dnb/eufemia/style";
+import Header from "./components/common/Header";
+import Content from "./components/common/Content";
 
 function App() {
   const message = useSelector((state) => state.parkings.displayBoard);
@@ -14,11 +16,13 @@ function App() {
   };
   return (
     <div className="App">
-      <h1 className="text-center font-bold text-3xl">Parking Garage</h1>
-      <p className="text-center font-medium text-xl">status: {message}</p>
-      <p className="text-center">
-        <Button text="Submit" on_click={displayBoard} />
-      </p>
+      <div className="flex flex-row flex-wrap w-full">
+        <Header></Header>
+        <Content></Content>
+      </div>
+
+      <p>status: {message}</p>
+      <Button text="Submit" on_click={displayBoard} />
     </div>
   );
 }
