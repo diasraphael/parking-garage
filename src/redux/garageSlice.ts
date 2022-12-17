@@ -1,27 +1,26 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
+import { GarageTemplate } from '../components/business/ParkingGarage/serviceData'
 
 export type InitialState = {
-  displayBoard: string;
-};
-const initialState: InitialState = { displayBoard: "You can park here!!!" };
+  garageTemplate: GarageTemplate | undefined
+}
+const initialState: InitialState = { garageTemplate: undefined }
 
 export const garageSlice = createSlice({
-  name: "parking garage",
+  name: 'parking garage',
   initialState,
   reducers: {
     // add your non-async reducers here
-    updateDisplayBoard: (state) => {
-      console.log("abc");
-      state.displayBoard =
-        "Sorry Parking garage is full, look for other parking garages nearby";
-    },
+    setGarageTemplate: (state, action) => {
+      state.garageTemplate = action.payload
+    }
   },
   extraReducers: {
     // add your async reducers here
-  },
-});
+  }
+})
 
 // Action creators
-export const { updateDisplayBoard } = garageSlice.actions;
+export const { setGarageTemplate } = garageSlice.actions
 
-export default garageSlice.reducer;
+export default garageSlice.reducer
