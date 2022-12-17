@@ -1,0 +1,6 @@
+.dnb-toggle-button-group__children {
+  display: flex;
+}
+.dnb-toggle-button-group__children > div {
+  margin-right: 1rem;
+}

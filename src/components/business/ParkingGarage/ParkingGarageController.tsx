@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { setGarageTemplate } from '../../../redux/garageSlice'
+import {
+  getSelectedParkingFloor,
+  setGarageTemplate
+} from '../../../redux/garageSlice'
 import { useDispatch } from '../../../redux/hooks'
 import { RootState } from '../../../redux/store'
 import { getTemplate } from './api'
@@ -12,10 +15,20 @@ const ParkingGarageController = () => {
   const template = useSelector(
     (state: RootState) => state.parkings.garageTemplate
   )
+  const selectedParkingFloor = useSelector(
+    (state: RootState) => state.parkings.selectedParkingFloor
+  )
+  const [selectedFloor, setSelectedFloor] = useState<string | undefined>('')
   useEffect(() => {
     async function getGarageTemplate() {
       const garageTemplate: GarageTemplate | undefined = await getTemplate()
       dispatch(setGarageTemplate(garageTemplate))
+      setSelectedFloor(garageTemplate?.parkingGarage.parkingFloors[0].id)
+      dispatch(
+        getSelectedParkingFloor(
+          garageTemplate?.parkingGarage.parkingFloors[0].id
+        )
+      )
     }
     getGarageTemplate()
   }, [dispatch])
@@ -24,7 +37,14 @@ const ParkingGarageController = () => {
     return <></>
   }
 
-  return <ParkingGarage template={template.parkingGarage}></ParkingGarage>
+  return (
+    <ParkingGarage
+      template={template.parkingGarage}
+      selectedFloor={selectedFloor}
+      setSelectedFloor={setSelectedFloor}
+      selectedParkingFloor={selectedParkingFloor}
+    ></ParkingGarage>
+  )
 }
 
 export default ParkingGarageController
