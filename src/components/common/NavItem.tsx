@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 interface NavItemProps {
-  url: string;
-  label: string;
+  url: string
+  label: string
 }
 
 const NavItem = (props: NavItemProps) => {
-  const { url, label } = props;
+  const { url, label } = props
   return (
     <div className="">
       <Link to={url}>{label}</Link>
     </div>
-  );
-};
+  )
+}
 
-export default NavItem;
+export default NavItem

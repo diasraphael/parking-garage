@@ -1,13 +1,13 @@
-import React from "react";
-import NavItem from "./NavItem";
+import React from 'react'
+import NavItem from './NavItem'
 
 const Nav = () => {
   return (
     <>
-      <NavItem url="/parkings" label="Parkings"></NavItem>
-      <NavItem url="/history" label="History"></NavItem>
+      <NavItem url="/parkings" label="Parkings" />
+      <NavItem url="/history" label="History" />
     </>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

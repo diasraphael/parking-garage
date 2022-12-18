@@ -1,13 +1,13 @@
-import React from "react";
-import { H2, Icon } from "@dnb/eufemia";
-import { car_1 as car } from "@dnb/eufemia/icons";
-import { useNavigate } from "react-router-dom";
+import React from 'react'
+import { H2, Icon } from '@dnb/eufemia'
+import { car_1 as car } from '@dnb/eufemia/icons'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const goHome = () => {
-    navigate("/");
-  };
+    navigate('/')
+  }
   return (
     <div className="p-8 h-20 flex flex-row justify-start items-center header w-full">
       <Icon
@@ -22,7 +22,7 @@ const Header = () => {
         DNB Parking Garage
       </H2>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

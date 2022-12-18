@@ -1,16 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {
-  GarageTemplate,
-  ParkingFloor
-} from '../components/business/ParkingGarage/serviceData'
+import { GarageTemplate } from '../model/serviceData'
 
 export type InitialState = {
   garageTemplate: GarageTemplate | undefined
-  selectedParkingFloor: ParkingFloor | undefined
+  selectedParkingFloorId: string | undefined
+  displayParkingSpacesBySelection: string | undefined
 }
 const initialState: InitialState = {
   garageTemplate: undefined,
-  selectedParkingFloor: undefined
+  selectedParkingFloorId: undefined,
+  displayParkingSpacesBySelection: undefined
 }
 
 export const garageSlice = createSlice({
@@ -21,11 +20,11 @@ export const garageSlice = createSlice({
     setGarageTemplate: (state, action) => {
       state.garageTemplate = action.payload
     },
-    getSelectedParkingFloor: (state, action) => {
-      state.selectedParkingFloor =
-        state.garageTemplate?.parkingGarage.parkingFloors.find(
-          (floor: ParkingFloor) => floor.id === action.payload
-        )
+    getSelectedParkingFloorId: (state, action) => {
+      state.selectedParkingFloorId = action.payload
+    },
+    setDisplayParkingSpacesBySelection: (state, action) => {
+      state.displayParkingSpacesBySelection = action.payload
     }
   },
   extraReducers: {
@@ -34,7 +33,10 @@ export const garageSlice = createSlice({
 })
 
 // Action creators
-export const { setGarageTemplate, getSelectedParkingFloor } =
-  garageSlice.actions
+export const {
+  setGarageTemplate,
+  getSelectedParkingFloorId,
+  setDisplayParkingSpacesBySelection
+} = garageSlice.actions
 
 export default garageSlice.reducer

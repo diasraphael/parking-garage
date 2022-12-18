@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const ParkingHistory = () => {
-  return <div>ParkingHistory</div>;
-};
+  return <div>ParkingHistory</div>
+}
 
-export default ParkingHistory;
+export default ParkingHistory

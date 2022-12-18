@@ -1,4 +1,7 @@
-import { PARKING_SPOT, PARKING_STATUS } from './types'
+import {
+  PARKING_SPOT,
+  PARKING_STATUS
+} from '../components/business/ParkingGarage/types'
 
 export type GarageTemplate = {
   parkingGarage: ParkingGarage

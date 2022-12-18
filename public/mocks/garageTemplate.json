@@ -10,61 +10,61 @@
         "availableParkingSpaces": 5,
         "parkingSpots": [
           {
-            "id": "PS0001",
+            "id": "PS1001",
             "name": "Parking Spot 0001",
             "type": "COMPACT",
             "status": "OCCUPIED"
           },
           {
-            "id": "PS0002",
+            "id": "PS1002",
             "name": "Parking Spot 0002",
             "type": "COMPACT",
             "status": "OCCUPIED"
           },
           {
-            "id": "PS0003",
+            "id": "PS1003",
             "name": "Parking Spot 0003",
             "type": "COMPACT",
             "status": "AVAILABLE"
           },
           {
-            "id": "PS0004",
+            "id": "PS1004",
             "name": "Parking Spot 0004",
             "type": "COMPACT",
             "status": "AVAILABLE"
           },
           {
-            "id": "PS0005",
+            "id": "PS1005",
             "name": "Parking Spot 0005",
             "type": "COMPACT",
             "status": "AVAILABLE"
           },
           {
-            "id": "PS0006",
+            "id": "PS1006",
             "name": "Parking Spot 0006",
             "type": "HANDICAPPED",
             "status": "OCCUPIED"
           },
           {
-            "id": "PS0007",
+            "id": "PS1007",
             "name": "Parking Spot 0007",
             "type": "LARGE",
             "status": "AVAILABLE"
           },
           {
-            "id": "PS0008",
+            "id": "PS1008",
             "name": "Parking Spot 0008",
             "type": "LARGE",
             "status": "AVAILABLE"
           },
           {
-            "id": "PS0009",
+            "id": "PS1009",
             "name": "Parking Spot 0009",
             "type": "MOTORCYCLE",
             "status": "OCCUPIED"
           },
           {
-            "id": "PS0010",
+            "id": "PS1010",
             "name": "Parking Spot 0010",
             "type": "MOTORCYCLE",
             "status": "OCCUPIED"

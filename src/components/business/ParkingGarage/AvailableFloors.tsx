@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
 import { ToggleButton, ProgressIndicator } from '@dnb/eufemia'
-import * as types from './serviceData'
-import { useDispatch } from '../../../redux/hooks'
-import { getSelectedParkingFloor } from '../../../redux/garageSlice'
+import * as types from '../../../model/serviceData'
 
 interface AvailableFloorsProps {
   parkingFloors: types.ParkingFloor[]
   selectedFloor: string | undefined
-  setSelectedFloor: (value: string) => void
+  getSelectedFloor: (value: string) => void
 }
 
 const AvailableFloors = (props: AvailableFloorsProps) => {
-  const { parkingFloors, selectedFloor, setSelectedFloor } = props
-  const dispatch = useDispatch()
+  const { parkingFloors, selectedFloor, getSelectedFloor } = props
   const [loading, setLoading] = useState(false)
 
   return (
@@ -23,8 +20,7 @@ const AvailableFloors = (props: AvailableFloorsProps) => {
         layout_direction="row"
         on_change={({ value }) => {
           setLoading(true)
-          setSelectedFloor(value)
-          dispatch(getSelectedParkingFloor(value))
+          getSelectedFloor(value)
           setLoading(false)
         }}
       >

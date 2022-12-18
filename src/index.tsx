@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import { Provider } from 'react-redux'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { Provider } from 'react-redux'
 import store from './redux/store'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ParkingHistory from './components/business/ParkingHistory'
 import Home from './components/common/Home'
 import ParkingGarageController from './components/business/ParkingGarage/ParkingGarageController'
@@ -16,16 +16,10 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App></App>}>
-            <Route path="" element={<Home></Home>}></Route>
-            <Route
-              path="parkings"
-              element={<ParkingGarageController></ParkingGarageController>}
-            ></Route>
-            <Route
-              path="/history"
-              element={<ParkingHistory></ParkingHistory>}
-            ></Route>
+          <Route path="/" element={<App />}>
+            <Route path="" element={<Home />} />
+            <Route path="parkings" element={<ParkingGarageController />} />
+            <Route path="/history" element={<ParkingHistory />} />
           </Route>
         </Routes>
       </BrowserRouter>

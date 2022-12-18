@@ -1,6 +1,6 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import Nav from "./Nav";
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Nav from './Nav'
 
 const Content = () => {
   return (
@@ -12,7 +12,7 @@ const Content = () => {
         <Outlet />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

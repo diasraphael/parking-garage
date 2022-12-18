@@ -1,5 +1,5 @@
-import { GarageTemplate } from './serviceData'
 import axios from 'axios'
+import { GarageTemplate } from '../../../model/serviceData'
 
 export const getTemplate = async (): Promise<GarageTemplate | undefined> => {
   try {
