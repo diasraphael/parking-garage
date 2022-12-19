@@ -11,7 +11,7 @@ const ParkingFloor = (props: ParkingFloorProps) => {
   const { data } = props
   return (
     <>
-      <div className="my-12">
+      <div className="my-8">
         <InfoCard
           text={data?.parkingPanelMessage}
           title="Parking Floor Available Spaces:"

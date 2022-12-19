@@ -35,13 +35,11 @@ function ParkingGarage(props: ParkingGarageProps) {
 
   const displayByFloor = () => (
     <>
-      <div className="ml-8">
-        <AvailableFloors
-          parkingFloors={parkingFloors}
-          selectedFloor={selectedFloor}
-          getSelectedFloor={getSelectedFloor}
-        />
-      </div>
+      <AvailableFloors
+        parkingFloors={parkingFloors}
+        selectedFloor={selectedFloor}
+        getSelectedFloor={getSelectedFloor}
+      />
       <ParkingFloor data={getSelectedParkingFloor(selectedFloor)} />
     </>
   )
@@ -59,6 +57,7 @@ function ParkingGarage(props: ParkingGarageProps) {
         />
       </div>
       <Dropdown
+        className="mb-8"
         data={displayParkingSpacesByOptions}
         label="Display Parking Spaces by:"
         value={displayParkingSpacesBySelection}
