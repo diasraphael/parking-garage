@@ -7,8 +7,7 @@ export enum PARKING_SPOT {
 
 export enum PARKING_STATUS {
   AVAILABLE = 'AVAILABLE',
-  OCCUPIED = 'OCCUPIED',
-  NOT_IN_USE = 'NOT_IN_USE'
+  OCCUPIED = 'OCCUPIED'
 }
 
 export type DisplayParkingSpacesByOptions = {
