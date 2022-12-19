@@ -27,7 +27,7 @@ function ParkingGarage(props: ParkingGarageProps) {
     displayParkingSpacesByOptions,
     getDisplayParkingSpacesBySelection
   } = props
-  const { parkingsAvailableMessage, parkingFloors } = template
+  const { parkingsAvailable, parkingFloors } = template
   const getSelectedParkingFloor = (value: string | undefined) =>
     template?.parkingFloors.find(
       (floor: types.ParkingFloor) => floor.id === value
@@ -54,8 +54,8 @@ function ParkingGarage(props: ParkingGarageProps) {
     <div>
       <div className="mb-12">
         <InfoCard
-          text={parkingsAvailableMessage}
-          title="Parking garage available spaces:"
+          text={parkingsAvailable}
+          title="Available spaces in parking garage:"
         />
       </div>
       <Dropdown

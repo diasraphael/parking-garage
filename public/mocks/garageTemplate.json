@@ -1,6 +1,6 @@
 {
   "parkingGarage": {
-    "parkingsAvailableMessage": "Available parking spaces 30",
+    "parkingsAvailable": "30",
     "parkingFloors": [
       {
         "id": "PF0001",

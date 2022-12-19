@@ -7,7 +7,7 @@ export type GarageTemplate = {
   parkingGarage: ParkingGarage
 }
 export type ParkingGarage = {
-  parkingsAvailableMessage: string
+  parkingsAvailable: string
   parkingFloors: ParkingFloor[]
 }
 export type ParkingFloor = {
