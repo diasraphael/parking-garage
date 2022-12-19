@@ -13,7 +13,7 @@ const AvailableFloors = (props: AvailableFloorsProps) => {
   const [loading, setLoading] = useState(false)
 
   return (
-    <>
+    <div className="mx-4">
       <ToggleButton.Group
         label="Available Parking Floors:"
         value={selectedFloor}
@@ -31,7 +31,7 @@ const AvailableFloors = (props: AvailableFloorsProps) => {
         ))}
       </ToggleButton.Group>
       {loading && <ProgressIndicator type="circular" />}
-    </>
+    </div>
   )
 }
 

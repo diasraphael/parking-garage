@@ -1,7 +1,8 @@
 import React from 'react'
-import { H1, InfoCard } from '@dnb/eufemia'
+import { H1, H4 } from '@dnb/eufemia'
 import * as types from '../../../model/serviceData'
 import ParkingSpot from '../ParkingSpot/ParkingSpot'
+import Field from './Field'
 
 interface ParkingFloorProps {
   data: types.ParkingFloor | undefined
@@ -10,23 +11,33 @@ interface ParkingFloorProps {
 const ParkingFloor = (props: ParkingFloorProps) => {
   const { data } = props
   return (
-    <>
-      <div className="my-8">
-        <InfoCard
-          text={data?.parkingPanelMessage}
-          title="Parking Floor Available Spaces:"
-        />
+    <div className="card my-12">
+      <div className="text-center text-3xl font-medium">
+        <h2>{data?.name}</h2>
       </div>
-      <H1 size="x-large">
-        Status on the available parking spaces in floor {data?.name} is
-        {data?.parkingPanelMessage}
+      <div className="card my-8 bg-[#f4fbf9]">
+        <H4>Details of the {data?.name}</H4>
+        <Field
+          label="Total parking spots available in this floor"
+          value={25}
+        ></Field>
+        <Field label="Parking spots available for compact" value={5}></Field>
+        <Field label="Parking spots available for large" value={5}></Field>
+        <Field
+          label="Parking spots available for handicapped"
+          value={5}
+        ></Field>
+        <Field label="Parking spots available for motorcycle" value={5}></Field>
+      </div>
+      <H1 size="large" className="ml-4 my-4">
+        Status of the parking spaces in the floor
       </H1>
-      <div className="flex flex-row flex-wrap">
+      <div className="flex flex-row flex-wrap justify-between">
         {data?.parkingSpots.map((spot: types.ParkingSpot) => (
           <ParkingSpot key={spot.id} data={spot} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

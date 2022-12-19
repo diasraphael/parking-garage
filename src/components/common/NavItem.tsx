@@ -12,7 +12,7 @@ const NavItem = (props: NavItemProps) => {
     <div className="">
       <NavLink
         to={url}
-        className="mr-4"
+        className="mr-4 text-xl"
         style={({ isActive }) => ({
           color: isActive ? 'active' : ''
         })}

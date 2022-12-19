@@ -1,5 +1,5 @@
 import React from 'react'
-import { H1 } from '@dnb/eufemia'
+import { H3 } from '@dnb/eufemia'
 import * as types from '../../../model/serviceData'
 
 interface ParkingSpotProps {
@@ -9,8 +9,8 @@ interface ParkingSpotProps {
 const ParkingSpot = (props: ParkingSpotProps) => {
   const { data } = props
   return (
-    <div className="basis-1/3 p-8">
-      <H1>{data.name}</H1>
+    <div className="card p-[10] m-[10px] w-full md:w-[30%]">
+      <H3>{data.name}</H3>
       <div>{data.id}</div>
       <div>{data.name}</div>
       <div>{data.status}</div>

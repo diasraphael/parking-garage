@@ -13,7 +13,6 @@ export type ParkingGarage = {
 export type ParkingFloor = {
   id: string
   name: string
-  parkingPanelMessage: string
   totalParkingSpaces: number
   availableParkingSpaces: number
   parkingSpots: ParkingSpot[]

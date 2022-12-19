@@ -50,14 +50,15 @@ function ParkingGarage(props: ParkingGarageProps) {
 
   return (
     <div>
-      <div className="mb-12">
+      <div className="mt-8 mb-12 text-xl">
         <InfoCard
           text={parkingsAvailable}
-          title="Available spaces in parking garage:"
+          className="text-xl"
+          title="Available spaces in parking garage"
         />
       </div>
       <Dropdown
-        className="mb-8"
+        className=" mx-4 mb-8"
         data={displayParkingSpacesByOptions}
         label="Display Parking Spaces by:"
         value={displayParkingSpacesBySelection}

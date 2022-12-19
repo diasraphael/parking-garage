@@ -23,3 +23,19 @@ a:hover {
   color: #a5e1d2;
   color: var(--color-mint-green);
 }
+.dnb-info-card {
+  background: #f4fbf9 !important;
+  font-size: 20px !important;
+}
+.dnb-info-card--content h3,
+.dnb-info-card--content p {
+  font-size: 20px !important;
+}
+.card {
+  border-radius: 0.25rem;
+  height: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  background: white;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
+}

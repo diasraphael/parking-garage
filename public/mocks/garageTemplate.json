@@ -5,7 +5,6 @@
       {
         "id": "PF0001",
         "name": "Parking Floor 0001",
-        "parkingPanelMessage": "Available parking spaces 5",
         "totalParkingSpaces": 10,
         "availableParkingSpaces": 5,
         "parkingSpots": [
@@ -74,7 +73,6 @@
       {
         "id": "PF0002",
         "name": "Parking Floor 0002",
-        "parkingPanelMessage": "Available parking spaces 7",
         "totalParkingSpaces": 10,
         "availableParkingSpaces": 7,
         "parkingSpots": [
@@ -143,7 +141,6 @@
       {
         "id": "PF0003",
         "name": "Parking Floor 0003",
-        "parkingPanelMessage": "Available parking spaces 9",
         "totalParkingSpaces": 10,
         "availableParkingSpaces": 9,
         "parkingSpots": [
