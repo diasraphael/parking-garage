@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 interface NavItemProps {
   url: string
@@ -10,7 +10,15 @@ const NavItem = (props: NavItemProps) => {
   const { url, label } = props
   return (
     <div className="">
-      <Link to={url}>{label}</Link>
+      <NavLink
+        to={url}
+        className="mr-4"
+        style={({ isActive }) => ({
+          color: isActive ? 'active' : ''
+        })}
+      >
+        {label}
+      </NavLink>
     </div>
   )
 }

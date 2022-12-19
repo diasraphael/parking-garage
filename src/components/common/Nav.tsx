@@ -4,8 +4,8 @@ import NavItem from './NavItem'
 const Nav = () => {
   return (
     <>
-      <NavItem url="/parkings" label="Parkings" />
-      <NavItem url="/history" label="History" />
+      <NavItem url="" label="Home" />
+      <NavItem url="parkings" label="Parkings" />
     </>
   )
 }

@@ -4,9 +4,22 @@
 .nav {
   border-right: 1px solid var(--color-black-border);
 }
-.centered {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.container {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
+a {
+  padding: 10px;
+}
+a:hover {
+  background-color: var(--color-mint-green-50);
+  border-radius: 0.25em;
+  color: var(--color-sea-green);
+}
+.active {
+  background-color: #14555a;
+  background-color: var(--color-emerald-green);
+  border-radius: 0.25em;
+  color: #a5e1d2;
+  color: var(--color-mint-green);
 }

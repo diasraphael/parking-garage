@@ -1,6 +1,5 @@
 import React from 'react'
-import { H2, Icon } from '@dnb/eufemia'
-import { car_1 as car } from '@dnb/eufemia/icons'
+import { H1 } from '@dnb/eufemia'
 import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
@@ -9,18 +8,10 @@ const Header = () => {
     navigate('/')
   }
   return (
-    <div className="p-8 h-20 flex flex-row justify-start items-center header w-full">
-      <Icon
-        icon={car}
-        title="Beach"
-        size="large"
-        aria-hidden="true"
-        className="cursor-pointer"
-        onClick={goHome}
-      />
-      <H2 space={0} className="ml-4">
+    <div className="p-8 h-60 flex flex-row justify-start items-center header w-full bg-[#A5E1D2]">
+      <H1 space={0} className="ml-4 cursor-pointer container" onClick={goHome}>
         DNB Parking Garage
-      </H2>
+      </H1>
     </div>
   )
 }

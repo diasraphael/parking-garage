@@ -5,10 +5,10 @@ import Nav from './Nav'
 const Content = () => {
   return (
     <>
-      <div className="nav w-1/4">
-        <Nav />
-      </div>
-      <div className="main w-3/4">
+      <div className="main w-full container">
+        <div className="flex my-8">
+          <Nav></Nav>
+        </div>
         <Outlet />
       </div>
     </>
