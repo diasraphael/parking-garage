@@ -12,10 +12,11 @@ interface ParkingSpotProps {
   data: types.ParkingSpot
   floorId: string
   addUserParking: (userParking: types.NewUserParking) => void
+  exitUserParking: (data: types.ParkingSpot) => void
 }
 
 const ParkingSpot = (props: ParkingSpotProps) => {
-  const { data, addUserParking, floorId } = props
+  const { data, addUserParking, exitUserParking, floorId } = props
   const [submitted, setSubmitted] = useState(false)
   const [, setValid] = useState(false)
   const [open, setOpen] = React.useState(false)
@@ -172,7 +173,7 @@ const ParkingSpot = (props: ParkingSpotProps) => {
               text="Exit Parking"
               className="my-2"
               on_click={() => {
-                console.log('on_click')
+                exitUserParking(data)
               }}
               variant="secondary"
             />

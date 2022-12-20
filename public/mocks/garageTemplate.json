@@ -7,6 +7,10 @@
         "name": "Parking Floor 0001",
         "totalParkingSpaces": 10,
         "availableParkingSpaces": 5,
+        "availableCompactSpaces": 3,
+        "availableLargeSpaces": 2,
+        "availableHandicappedSpaces": 0,
+        "availableMotorcycle": 0,
         "parkingSpots": [
           {
             "id": "PS1001",

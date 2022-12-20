@@ -47,7 +47,7 @@ const ParkingGarageController = () => {
       dispatch(setGarageTemplate(garageTemplate))
       dispatch(
         getSelectedParkingFloorId(
-          garageTemplate?.parkingGarage.parkingFloors[0].id
+          garageTemplate?.parkingGarage?.parkingFloors?.[0].id
         )
       )
       dispatch(

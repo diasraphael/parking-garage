@@ -4,17 +4,21 @@ import {
 } from '../components/business/ParkingGarage/types'
 
 export type GarageTemplate = {
-  parkingGarage: ParkingGarage
+  parkingGarage: ParkingGarage | undefined
 }
 export type ParkingGarage = {
-  parkingsAvailable: string
-  parkingFloors: ParkingFloor[]
+  parkingsAvailable: string | undefined
+  parkingFloors: ParkingFloor[] | []
 }
 export type ParkingFloor = {
   id: string
   name: string
   totalParkingSpaces: number
   availableParkingSpaces: number
+  availableCompactSpaces: number
+  availableLargeSpaces: number
+  availableHandicappedSpaces: number
+  availableMotorcycle: number
   parkingSpots: ParkingSpot[]
 }
 export type ParkingSpot = {

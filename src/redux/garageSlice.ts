@@ -1,20 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {
-  GarageTemplate,
-  ParkingFloor,
-  ParkingSpot,
-  UsersParkingList
-} from '../model/serviceData'
+import { GarageTemplate, UsersParkingList } from '../model/serviceData'
 
 export type InitialState = {
   garageTemplate: GarageTemplate | undefined
-  selectedParkingFloorId: string | undefined
+  selectedParkingFloorId: string
   displayParkingSpacesBySelection: string | undefined
   usersParkingList: UsersParkingList[] | []
 }
 const initialState: InitialState = {
   garageTemplate: undefined,
-  selectedParkingFloorId: undefined,
+  selectedParkingFloorId: '',
   displayParkingSpacesBySelection: undefined,
   usersParkingList: []
 }
@@ -37,20 +32,7 @@ export const garageSlice = createSlice({
       state.usersParkingList = action.payload
     },
     updateFloorParkingSpaces: (state, action) => {
-      state.garageTemplate?.parkingGarage.parkingFloors?.map(
-        (floor: ParkingFloor) => {
-          if (floor.id === action.payload.floorId) {
-            floor.parkingSpots.map((spot: ParkingSpot) => {
-              if (spot.id === action.payload.spotId) {
-                spot.status = action.payload.status
-              }
-              return spot
-            })
-            return floor
-          }
-          return floor
-        }
-      )
+      state.garageTemplate!.parkingGarage!.parkingFloors = action.payload
     }
   },
   extraReducers: {

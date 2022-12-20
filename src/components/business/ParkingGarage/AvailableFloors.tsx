@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { ToggleButton, ProgressIndicator } from '@dnb/eufemia'
 import * as types from '../../../model/serviceData'
+import { v1 } from 'uuid'
 
 interface AvailableFloorsProps {
-  parkingFloors: types.ParkingFloor[]
+  parkingFloors: types.ParkingFloor[] | undefined
   selectedFloor: string | undefined
   getSelectedFloor: (value: string) => void
 }
@@ -24,8 +25,8 @@ const AvailableFloors = (props: AvailableFloorsProps) => {
           setLoading(false)
         }}
       >
-        {parkingFloors.map((floor: types.ParkingFloor) => (
-          <div key={floor.id}>
+        {parkingFloors?.map((floor: types.ParkingFloor) => (
+          <div key={v1()}>
             <ToggleButton text={floor.id} value={floor.id} />
           </div>
         ))}

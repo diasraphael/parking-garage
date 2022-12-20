@@ -10,8 +10,8 @@ import {
 } from './types'
 
 interface ParkingGarageProps {
-  template: types.ParkingGarage
-  selectedFloor: string | undefined
+  template: types.ParkingGarage | undefined
+  selectedFloor: string
   getSelectedFloor: (value: string) => void
   displayParkingSpacesBySelection: string | undefined
   displayParkingSpacesByOptions: DisplayParkingSpacesByOptions[]
@@ -27,16 +27,15 @@ function ParkingGarage(props: ParkingGarageProps) {
     displayParkingSpacesByOptions,
     getDisplayParkingSpacesBySelection
   } = props
-  const { parkingsAvailable, parkingFloors } = template
   const getSelectedParkingFloor = (value: string | undefined) =>
-    template?.parkingFloors.find(
+    template?.parkingFloors?.find(
       (floor: types.ParkingFloor) => floor.id === value
     )
 
   const displayByFloor = () => (
     <>
       <AvailableFloors
-        parkingFloors={parkingFloors}
+        parkingFloors={template?.parkingFloors}
         selectedFloor={selectedFloor}
         getSelectedFloor={getSelectedFloor}
       />
@@ -44,7 +43,7 @@ function ParkingGarage(props: ParkingGarageProps) {
     </>
   )
   const displayByAllFloor = () =>
-    template?.parkingFloors.map((floor: types.ParkingFloor) => (
+    template?.parkingFloors?.map((floor: types.ParkingFloor) => (
       <ParkingFloor key={floor.id} data={floor} />
     ))
 
@@ -52,7 +51,7 @@ function ParkingGarage(props: ParkingGarageProps) {
     <div>
       <div className="mt-8 mb-12 text-xl">
         <InfoCard
-          text={parkingsAvailable}
+          text={template?.parkingsAvailable}
           className="text-xl"
           title="Available spaces in parking garage"
         />
