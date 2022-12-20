@@ -1,0 +1,16 @@
+{
+  "usersParkingList": [
+    {
+      "parkingId": "2398fea0-8058-11ed-9f52-4f8d0f166e5c",
+      "username": "Dias",
+      "email": "diasraphael88@gmail.com",
+      "mobile": "96978347",
+      "hours": "7",
+      "floorId": "PF0001",
+      "date": "2022-12-07",
+      "spotId": "PS1003",
+      "type": "COMPACT",
+      "status": "OCCUPIED"
+    }
+  ]
+}

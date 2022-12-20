@@ -20,6 +20,19 @@ export type ParkingFloor = {
 export type ParkingSpot = {
   id: string
   name: string
-  type: PARKING_SPOT
-  status: PARKING_STATUS
+  type: PARKING_SPOT | undefined
+  status: PARKING_STATUS | undefined
 }
+export type NewUserParking = {
+  parkingId: string
+  username: string
+  email: string
+  mobile: string
+  date: string
+  hours: number | undefined
+  spotId: string
+  floorId: string
+  type: PARKING_SPOT | undefined
+  status: PARKING_STATUS | undefined
+}
+export type UsersParkingList = NewUserParking[]

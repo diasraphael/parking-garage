@@ -2,7 +2,7 @@ import React from 'react'
 
 interface FieldProps {
   label: string
-  value: number | string
+  value: number | string | undefined
 }
 
 const Field = (props: FieldProps) => {

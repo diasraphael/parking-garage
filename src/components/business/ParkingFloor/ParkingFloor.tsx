@@ -1,8 +1,8 @@
 import React from 'react'
 import { H1, H4 } from '@dnb/eufemia'
 import * as types from '../../../model/serviceData'
-import ParkingSpot from '../ParkingSpot/ParkingSpot'
 import Field from './Field'
+import ParkingSpotController from '../ParkingSpot/ParkingSpotController'
 
 interface ParkingFloorProps {
   data: types.ParkingFloor | undefined
@@ -34,7 +34,11 @@ const ParkingFloor = (props: ParkingFloorProps) => {
       </H1>
       <div className="flex flex-row flex-wrap justify-between">
         {data?.parkingSpots.map((spot: types.ParkingSpot) => (
-          <ParkingSpot key={spot.id} data={spot} />
+          <ParkingSpotController
+            key={spot.id}
+            data={spot}
+            floorId={data.id}
+          ></ParkingSpotController>
         ))}
       </div>
     </div>

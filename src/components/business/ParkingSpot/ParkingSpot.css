@@ -1,0 +1,9 @@
+form span {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2px;
+}
+.dnb-scroll-view {
+  height: 100rem;
+}
