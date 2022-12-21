@@ -79,6 +79,10 @@
         "name": "Parking Floor 0002",
         "totalParkingSpaces": 10,
         "availableParkingSpaces": 7,
+        "availableCompactSpaces": 1,
+        "availableLargeSpaces": 0,
+        "availableHandicappedSpaces": 2,
+        "availableMotorcycle": 0,
         "parkingSpots": [
           {
             "id": "PS2001",
@@ -96,7 +100,7 @@
             "id": "PS2003",
             "name": "Parking Spot 2003",
             "type": "LARGE",
-            "status": "AVAILABLE"
+            "status": "OCCUPIED"
           },
           {
             "id": "PS2004",
@@ -126,7 +130,7 @@
             "id": "PS2008",
             "name": "Parking Spot 2008",
             "type": "MOTORCYCLE",
-            "status": "AVAILABLE"
+            "status": "OCCUPIED"
           },
           {
             "id": "PS2009",
@@ -146,7 +150,11 @@
         "id": "PF0003",
         "name": "Parking Floor 0003",
         "totalParkingSpaces": 10,
-        "availableParkingSpaces": 9,
+        "availableParkingSpaces": 5,
+        "availableCompactSpaces": 2,
+        "availableLargeSpaces": 1,
+        "availableHandicappedSpaces": 0,
+        "availableMotorcycle": 2,
         "parkingSpots": [
           {
             "id": "PS3001",
