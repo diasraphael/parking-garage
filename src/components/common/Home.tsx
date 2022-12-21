@@ -19,6 +19,16 @@ const Home = () => {
           Each parking floor have a display board showing any free parking spot
           for each spot type.
         </p>
+        <p className="text-xl my-8">
+          we can display availability by floor and for the whole parking lot
+        </p>
+        <p className="text-xl my-8"> we can Add / Modify parking spot</p>
+        <p className="text-xl my-8">
+          we display the status of the available spot types for each floor
+        </p>
+        <p className="text-xl my-8">
+          we can enter and exit in one of the spot types by entering the details
+        </p>
       </div>
     </div>
   )
