@@ -12,7 +12,7 @@ const NavItem = (props: NavItemProps) => {
     <div className="">
       <NavLink
         to={url}
-        className="mr-4 text-xl"
+        className="mr-4 text-xl text-[#a5e1d2] active-[#a5e1d2] hover:text-[#007272]"
         style={({ isActive }) => ({
           color: isActive ? 'active' : ''
         })}

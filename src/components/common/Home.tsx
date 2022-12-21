@@ -15,6 +15,10 @@ const Home = () => {
           have different parking spots available, we have compact, large,
           motorcycle, handicapped parking spots.
         </p>
+        <p className="text-xl my-8">
+          Each parking floor have a display board showing any free parking spot
+          for each spot type.
+        </p>
       </div>
     </div>
   )

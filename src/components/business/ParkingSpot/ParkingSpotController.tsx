@@ -36,7 +36,6 @@ const ParkingSpotController = (props: ParkingSpotControllerProps) => {
         return { availableMotorcycle: value }
     }
   }
-
   const updateSpotAvailability = (
     data:
       | {
@@ -71,6 +70,30 @@ const ParkingSpotController = (props: ParkingSpotControllerProps) => {
     })
   }
 
+  const modifyParkingSpot = (
+    spotId: string,
+    type: PARKING_SPOT | undefined,
+    floorId: string
+  ) => {
+    return parkingFloors?.map((floor: types.ParkingFloor) => {
+      if (floor.id === floorId) {
+        const newFloor = { ...floor }
+        const { parkingSpots } = newFloor
+        const updatedSpots = parkingSpots.map((spot: types.ParkingSpot) => {
+          if (spot.id === spotId) {
+            return { ...spot, type: type }
+          }
+          return spot
+        })
+        return {
+          ...newFloor,
+          parkingSpots: updatedSpots
+        }
+      }
+      return floor
+    })
+  }
+
   const dispatch = useDispatch()
   const addUserParking = (userParking: types.NewUserParking) => {
     dispatch(updateUsersParkingList([...usersParkingList, userParking]))
@@ -91,10 +114,19 @@ const ParkingSpotController = (props: ParkingSpotControllerProps) => {
     )
     dispatch(updateFloorParkingSpaces(updatedFloors))
   }
+  const updateSpotType = (
+    spotId: string,
+    type: PARKING_SPOT | undefined,
+    floorId: string
+  ) => {
+    const updatedFloors = modifyParkingSpot(spotId, type, floorId)
+    dispatch(updateFloorParkingSpaces(updatedFloors))
+  }
   return (
     <ParkingSpot
       addUserParking={addUserParking}
       exitUserParking={exitUserParking}
+      updateSpotType={updateSpotType}
       data={data}
       floorId={floorId}
     ></ParkingSpot>
