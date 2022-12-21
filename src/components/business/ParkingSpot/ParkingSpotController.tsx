@@ -9,10 +9,16 @@ import { useDispatch } from '../../../redux/hooks'
 import { RootState } from '../../../redux/store'
 import { PARKING_SPOT, PARKING_STATUS } from '../ParkingGarage/types'
 import ParkingSpot from './ParkingSpot'
+import { toast } from 'react-toastify'
 
 interface ParkingSpotControllerProps {
   data: types.ParkingSpot
   floorId: string
+}
+export const notify = (text: string) => {
+  toast.success(text, {
+    position: toast.POSITION.BOTTOM_LEFT
+  })
 }
 
 const ParkingSpotController = (props: ParkingSpotControllerProps) => {
@@ -24,6 +30,7 @@ const ParkingSpotController = (props: ParkingSpotControllerProps) => {
     (state: RootState) =>
       state.parkings.garageTemplate?.parkingGarage?.parkingFloors
   )
+
   const updateParkingSpot = (type: PARKING_SPOT | undefined, value: number) => {
     switch (type) {
       case PARKING_SPOT.COMPACT:
@@ -102,6 +109,7 @@ const ParkingSpotController = (props: ParkingSpotControllerProps) => {
       PARKING_STATUS.OCCUPIED
     )
     dispatch(updateFloorParkingSpaces(updatedFloors))
+    notify('User successfully parked the vehicle !!!')
   }
   const exitUserParking = (data: types.ParkingSpot) => {
     const updatedFloors = updateSpotAvailability(
@@ -113,6 +121,7 @@ const ParkingSpotController = (props: ParkingSpotControllerProps) => {
       PARKING_STATUS.AVAILABLE
     )
     dispatch(updateFloorParkingSpaces(updatedFloors))
+    notify('User exited the garage !!!')
   }
   const updateSpotType = (
     spotId: string,
@@ -121,6 +130,7 @@ const ParkingSpotController = (props: ParkingSpotControllerProps) => {
   ) => {
     const updatedFloors = modifyParkingSpot(spotId, type, floorId)
     dispatch(updateFloorParkingSpaces(updatedFloors))
+    notify('User updated the parking spot !!!')
   }
   return (
     <ParkingSpot

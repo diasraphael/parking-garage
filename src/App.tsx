@@ -3,6 +3,8 @@ import './App.css'
 import '@dnb/eufemia/style'
 import Header from './components/common/Header'
 import Content from './components/common/Content'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <Header></Header>
         <Content></Content>
       </div>
+      <ToastContainer />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import { updateFloorParkingSpaces } from '../../../redux/garageSlice'
 import { useDispatch } from '../../../redux/hooks'
 import { RootState } from '../../../redux/store'
 import { PARKING_SPOT, PARKING_STATUS } from '../ParkingGarage/types'
+import { notify } from '../ParkingSpot/ParkingSpotController'
 import ParkingFloor from './ParkingFloor'
 interface ParkingFloorControllerProps {
   data: types.ParkingFloor | undefined
@@ -45,6 +46,7 @@ const ParkingFloorController = (props: ParkingFloorControllerProps) => {
   const addParkingSpot = (value: PARKING_SPOT | undefined) => {
     const updatedFloors = updateParkingSpot(data, value)
     dispatch(updateFloorParkingSpaces(updatedFloors))
+    notify('User added parking spot to the garage !!!')
   }
   return (
     <div>
