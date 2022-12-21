@@ -7,14 +7,15 @@ interface ModalPopupProps {
   handleSubmit: () => void
   handleClose: () => void
   children: any
+  text: string
 }
 const ModalPopup = (props: ModalPopupProps) => {
-  const { show, handleClose, handleSubmit, children } = props
+  const { show, handleClose, handleSubmit, children, text } = props
 
   return (
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
-        <Modal.Title>Modify Parking</Modal.Title>
+        <Modal.Title>{text}</Modal.Title>
       </Modal.Header>
       <Modal.Body>{children}</Modal.Body>
       <Modal.Footer>

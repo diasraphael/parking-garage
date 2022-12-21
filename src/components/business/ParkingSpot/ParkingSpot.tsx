@@ -113,6 +113,7 @@ const ParkingSpot = (props: ParkingSpotProps) => {
                   handleClose={handleOpen}
                   handleSubmit={handleSubmit}
                   show={open}
+                  text="Enter parking"
                 >
                   <form>
                     <Input
@@ -188,6 +189,7 @@ const ParkingSpot = (props: ParkingSpotProps) => {
                     handleSubmit={handleModifySubmit}
                     handleClose={handleClose}
                     show={show}
+                    text="Modify Parking"
                   >
                     <Dropdown
                       label="Type:"

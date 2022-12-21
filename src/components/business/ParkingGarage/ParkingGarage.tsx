@@ -3,11 +3,11 @@ import { Dropdown, InfoCard } from '@dnb/eufemia'
 import * as types from '../../../model/serviceData'
 import './ParkingGarage.css'
 import AvailableFloors from './AvailableFloors'
-import ParkingFloor from '../ParkingFloor/ParkingFloor'
 import {
   DisplayParkingSpacesByOptions,
   DISPLAY_AVAILABLE_SPACES
 } from './types'
+import ParkingFloorController from '../ParkingFloor/ParkingFloorController'
 
 interface ParkingGarageProps {
   template: types.ParkingGarage | undefined
@@ -39,12 +39,12 @@ function ParkingGarage(props: ParkingGarageProps) {
         selectedFloor={selectedFloor}
         getSelectedFloor={getSelectedFloor}
       />
-      <ParkingFloor data={getSelectedParkingFloor(selectedFloor)} />
+      <ParkingFloorController data={getSelectedParkingFloor(selectedFloor)} />
     </>
   )
   const displayByAllFloor = () =>
     template?.parkingFloors?.map((floor: types.ParkingFloor) => (
-      <ParkingFloor key={floor.id} data={floor} />
+      <ParkingFloorController key={floor.id} data={floor} />
     ))
 
   return (
