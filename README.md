@@ -2,6 +2,11 @@
 
 ## Class Diagram
 
+
+Live Demo of this site is available in the below link
+
+`https://master.d3c0i38s5blve9.amplifyapp.com/`
+
 ## Available Scripts
 
 In the project directory, you can run:
